@@ -5,7 +5,7 @@ import { categories } from "../utils/constants";
 
 const selcetedCategory = 'New'
 
-function SideBar() {
+function SideBar({selectedCategory ,setSelectedCategory}) {
   return (
     <Stack
       direction="row"
@@ -19,6 +19,7 @@ function SideBar() {
         categories.map((category) => {
           return (
             <button 
+            onClick={() => {setSelectedCategory(category.name)}}
             className="category-btn"
             style={{background: category.name === selcetedCategory && '#FC1503', color: 'white'}}
             key={category.name}
