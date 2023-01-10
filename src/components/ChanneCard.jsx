@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { demoProfilePicture } from '../utils/constants'
 import { display, height } from '@mui/system'
 
-function ChanneCard({ChannelDatail}) {
+function ChanneCard({channelDatail, marginTop}) {
   return (
     <Box
     sx={{
@@ -16,24 +16,25 @@ function ChanneCard({ChannelDatail}) {
         justifyContent:'center',
         width: {xs: '356px', md : '320px' },
         height: '326px',
-        margin: 'auto'
+        margin: 'auto',
+        marginTop: "-93px"
     }}
     >
-        <Link to={`/channel/${ChannelDatail?.id.channelId}`}>
+        <Link to={`/channel/${channelDatail?.id.channelId}`}>
         <CardContent sx={{display: 'flex' , flexDirection:'column', justifyContent: 'center', textAlign: 'center', color: '#fff'}}>
             <CardMedia 
-            image={ChannelDatail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+            image={channelDatail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
             sx={{
                 borderRadius: '50%', height: '180px', width: '180px', mb: 2, border:'1px solid #e3e3e3'
             }}
             />
             <Typography variant='h6'>
-              {ChannelDatail?.snippet?.title}
+              {channelDatail?.snippet?.title}
               <CheckCircle sx={{fontSize:12, color:'gray', ml: '5px'}}/>
             </Typography>
-            {ChannelDatail?.statistics?.subscriberCount && (
+            {channelDatail?.statistics?.subscriberCount && (
               <Typography>
-                {parseInt(ChannelDatail?.statistics?.subscriberCount).toLocaleString()} Subscribers
+                {parseInt(channelDatail?.statistics?.subscriberCount).toLocaleString()} Subscribers
               </Typography>
             )}
         </CardContent>
