@@ -10,3 +10,4 @@ export {default as SideBar} from './SideBar'
 export {default as Videos} from './Videos'
 export {default as ChanneCard} from './ChanneCard'
 export {default as VideoCard} from './VideoCard'
+export { default as Loader } from './Loader';
