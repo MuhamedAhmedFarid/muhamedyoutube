@@ -1,12 +1,14 @@
-import React from 'react'
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/system'
 import {NavBar, VideoDetail, Feed, ChannelDetail, SearchFeed} from './components'
 import Form from './components/Form'
+import { backgroundImg } from './utils/constants'
 function App() {
+ 
   return (
-    <BrowserRouter>
-        <Box sx={{background: '#000'}}>
+    <BrowserRouter>    
+        <Box sx={{background: '#000'}} >
             <NavBar />
             <Form />
             <Routes>
@@ -16,6 +18,7 @@ function App() {
                 <Route path='/search/:searchTerm' element={<SearchFeed />} />
             </Routes>
         </Box>
+        
     </BrowserRouter>
   )
 }
