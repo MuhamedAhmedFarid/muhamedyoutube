@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import { SideBar, Videos } from "./";
+import { NavBar, SideBar, Videos } from "./";
 import axios from "axios";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+
 
 function Feed() {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -15,6 +16,8 @@ function Feed() {
   }, [selectedCategory]);
 
   return (
+    <div>
+      <NavBar />
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
         sx={{
@@ -48,6 +51,7 @@ function Feed() {
         <Videos videos={videos} />
       </Box>
     </Stack>
+    </div>
   );
 }
 

@@ -9,10 +9,9 @@ function App() {
   return (
     <BrowserRouter>    
         <Box sx={{background: '#000'}} >
-            <NavBar />
-            <Form />
             <Routes>
-                <Route path='/' exact element={<Feed />} />
+                <Route path='/home'  element={<Feed />} />
+                <Route path='/' exact element={<Form />} />
                 <Route path='/video/:id' element={<VideoDetail />} />
                 <Route path='/channel/:id' element={<ChannelDetail />} />
                 <Route path='/search/:searchTerm' element={<SearchFeed />} />

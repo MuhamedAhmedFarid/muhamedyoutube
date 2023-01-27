@@ -5,32 +5,15 @@ import { Link, useParams } from "react-router-dom";
 import { Typography, Box, Stack } from "@mui/material";
 import { CheckBox } from "@mui/icons-material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Videos, Loader } from "./";
+import { Videos, Loader, NavBar } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 function VideoDetail() {
   const { id } = useParams();
-  // const [videoDetail, setVideoDetail] = useState(null);
-  // const [videos, setVideos] = useState(null);
-
-
-  // const {
-  //   snippet: { title, channelId, channelTitle },
-  //   statistics: { viewCount, likeCount },
-  // } = videoDetail;
-  // useEffect(() => {
-  //   fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
-  //     setVideoDetail(data.items[0])
-  //   );
-
-  //   fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
-  //     (data) => setVideos(data.items)
-  //   );
-  // }, [id]);
-
-  // if(!videoDetail?.snippet) return <Loader />;
-
   return (
+    <div>
+      <NavBar />
+    
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
@@ -62,6 +45,7 @@ function VideoDetail() {
         </Box> */}
       </Stack>
     </Box>
+    </div>
   );
 };
 
