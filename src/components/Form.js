@@ -34,6 +34,7 @@ function Form() {
 
   return (
     <div className="form__container" >
+      <h1 className="puta">DANI IS PUTA</h1>
       <form className={!isFormShowing ? "show" : ""}>
         <div className="container ">
           <div className="brand-logo">
