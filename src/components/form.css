@@ -16,23 +16,7 @@ body{
 .form__container{
   position: relative;
 }
-/* .form__container::after{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 10;
-}  */
-/* form > * {
-  z-index: 0;
-  position: relative;
 
-}  */
 .container {
   position: fixed;
   left: 40%;
@@ -143,10 +127,7 @@ body{
 
   
 }
-.puta{
-  background-color: brown;
-  font-weight: bold;
-}
+
 
 
 @media  screen and (max-width: 600px) {

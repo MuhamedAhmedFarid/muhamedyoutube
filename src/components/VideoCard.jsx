@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from '@mui/material';
 import { CheckCircle } from "@mui/icons-material";
 import { demoChannelUrl, demoVideoUrl, demoThumbnailUrl, demoChannelTitle,demoVideoTitle } from "../utils/constants";
-import { borderRadius } from "@mui/system";
+
 function VideoCard({ video:{id : {videoId}, snippet} }) {
     return (
         <Card sx={{width: {md: '320px', xs: '100%'},  borderRadius: 0 , boxShadow:'none'} } >
